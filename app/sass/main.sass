@@ -1,0 +1,1008 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+@keyframes sliderLeftOn 
+	0%
+		transform: translateX(-640px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+@keyframes sliderRightOn 
+	0%
+		transform: translateX(640px)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+@keyframes sliderLeftOff 
+	0%
+		transform: translateX(0)
+		opacity: 1
+	100%
+		transform: translateX(-640px)
+		opacity: 0
+@keyframes sliderRightOff 
+	0%
+		transform: translateX(0)
+		opacity: 1
+	100%
+		transform: translateX(640px)
+		opacity: 0
+@keyframes h4inset
+	0%
+		opacity: 0
+		transform: perspective(900px) rotate3d(180,-45,0,-135deg)
+	100%
+		opacity: 1
+		transform: perspective(0) rotate3d(0,0,0,0)
+@keyframes navtoggle
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(225deg)
+@keyframes navtoggle2
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(315deg) translateY(-5px) translateX(4px)
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 18px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	h2
+		font-family: $bebas
+	a
+		color: #828282
+		transition: 0.2s
+		&:hover
+			text-decoration: none
+	.aside-lines
+		display: inline-block
+		position: relative
+		&:before, &:after
+			content: ""
+			width: 60px
+			position: absolute
+			height: 0
+			top: 50%
+			border-bottom: 1px solid #CCCCCC
+			margin-top: -1px
+		&:before
+			left: -72px
+		&:after
+			right: -72px
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.container
+header
+	padding-top: 30px
+	box-shadow: 0 6px 10px rgba(#000, 0.1)
+	.navbar	
+		margin-bottom: 21px
+		.navbar-header
+			.navbar-brand
+				height: auto
+				padding: 0
+		.navbar-collapse
+			.navbar-nav
+				padding-top: 4px
+				&:first-child
+					position: relative
+					left: 40px
+					li
+						padding: 0 23px 0 14px
+						a
+							padding: 0 0 2px 0
+							img
+								padding-right: 8px
+				li
+					a, :not(.dropdomn-menu) a
+						line-height: 40px
+						padding: 0 25px 2px 25px
+						position: relative
+						&:before
+							width: 50%
+							content: ""
+							position: absolute
+							bottom: -3px
+							left: 3px
+							border-bottom: 2px solid transparent
+						&.register
+							background-color: $red
+							color: #fff
+							padding-right: 15px
+							padding-left: 15px
+							&:after
+								content: ""
+								position: absolute
+								bottom: 0px
+								left: 15px
+								height: 1px
+								transition: 0.2s
+								background-color: $red
+								width: 85%
+								box-shadow: 0 0 10px 1px $red
+							&:hover, &:focus
+								background-color: $red
+								color: #fff
+								&:after
+									width: 100%	
+									left: 0
+					a:hover, a:focus
+						background-color: transparent
+						color: $red
+				li.active a
+					color: #000
+					&:before
+						border-color: $red
+				&.navbar-right
+					border-left: 1px solid #E5E5E5
+					li
+						&.active
+				.dropdown
+					& > a
+						&:hover, &:focus
+							color: $red
+							background-color: transparent
+					.dropdown-menu
+						background-color: #f2f2f2
+						border: none
+						width: 700px
+						top: 65px
+						left: -100px
+						padding: 42px 0
+						border-radius: 0
+						a
+							display: block
+							padding: 0
+						h3
+							font-size: 27px
+							margin-bottom: 0
+							margin-top: 0
+						p
+							font-size: 16px
+							line-height: 20px
+						&:after
+							content: ""
+							position: absolute
+							top: -15px
+							left: 175px
+							width: 32px
+							height: 70px
+							background-color: #f2f2f2
+							border-radius: 85% 85% 0 0
+						.col-lg-5, .col-lg-7
+							padding-left: 42px
+							padding-right: 42px
+
+							a
+								h3
+									color: #333333
+									transition: 0.2s
+									font-family: $bebas
+									font-weight: bold
+								&:hover,:focus
+									color: #828282
+									h3
+										color: $red
+						.col-lg-5
+							border-right: 1px solid #ccc
+						.col-lg-7
+							border-left: 1px solid #ccc
+							margin-left: -1px
+.banner-top
+	padding-bottom: 170px
+	overflow: hidden
+	.col-lg-7
+		position: relative
+		.video-box
+			margin-left: 45px
+			margin-top: 92px
+			iframe
+				width: 623px
+				height: 391px
+				background-color: $red
+				position: relative
+				z-index: 100
+			img
+				display: none
+			&:after
+				content: ""
+				position: absolute
+				width: 918px
+				height: 658px
+				background: url("../img/banner-top-bg.png") no-repeat
+				left: -84px
+				top: 69px
+	.col-lg-5
+		h2
+			font-size: 70px
+			line-height: 70px
+			margin-top: 89px
+			margin-bottom: 29px
+			position: relative
+			display: inline-block
+			&:after
+				content: ""
+				position: absolute
+				width: 32%
+				bottom: -25px
+				left: 0
+				border-bottom: 2px solid $red
+		p
+			font-size: 21px
+			line-height: 37px
+			padding-top: 18px
+section[class^="land"]
+	text-align: center
+	h2
+		font-size: 42px
+		position: relative
+		display: block
+		text-align: center
+		margin-top: 44px
+		display: inline-block
+		margin-left: auto
+		margin-right: auto
+		span
+			font-style: italic
+			font-weight: lighter
+			color: #999999
+			font-size: 18px
+			position: absolute
+			top: 2px
+			left: -34px
+			font-family: $default-font
+			cursor: default
+			&:after
+				content: ""
+				position: absolute
+				width: 31px
+				transform: rotate(-45deg)
+				bottom: 10px
+				right: -18px
+				border-bottom: 1px solid #999999
+.land-01
+	text-align: center
+	padding-bottom: 55px
+	background: #f7f7f7 url("../img//icon/chips1.png") no-repeat 0 123px
+	p
+		background-color: #FFF
+		display: block
+		font-size: 21px
+		padding: 26px 15px
+		margin-top: 60px
+		position: relative
+		span
+			background-color: $red
+			display: inline-block
+			color: #fff
+			padding: 0 5px
+		&:before
+			content: ""
+			position: absolute
+			right: -77px
+			top: -72px
+			width: 171px
+			height: 144px
+			background: url("../img/icon/hat.png") no-repeat 0 0
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 20px
+			width: 95%
+			height: 0
+			box-shadow: 0 0 25px 3px rgba(#000, 0.25)
+			z-index: -1
+	.col-lg-10 .row
+		margin-left: -35px
+		margin-right: -35px
+.land-02
+	padding-top: 33px
+	.slider-first
+		text-align: left
+		overflow: hidden
+		position: relative
+		padding-bottom: 102px
+		.navigation
+			position: absolute
+			top: 460px
+			left: 50%
+			margin-left: -70px
+			button
+				font-size: 0
+				line-height: 0
+				width: 70px
+				height: 70px
+				position: relative
+				border: none
+				outline: 0
+				background-color: #FFF
+				&:before
+					content: ""
+					position: absolute
+					width: 70px
+					height: 70px
+					top: 0
+					left: 0
+				&.slider-prev:before
+					background: url("../img/chev-left.svg") center no-repeat
+				&.slider-next
+					&:after
+						position: absolute
+						content: ""
+						width: 0
+						height: 30px
+						border: 1px solid #E5E5E5
+						left: -1px
+						top: 50%
+						margin-top: -15px
+					&:before
+						background: url("../img/chev-right.svg") center no-repeat
+				&:hover
+					background-color: #E5E5E5
+		.dots
+			position: relative
+			float: left
+			left: 50%
+			top: 71px
+			ul
+				list-style: none
+				margin: 0 auto
+				padding: 0
+				display: block
+				margin-left: -50%
+				li
+					display: inline-block
+					opacity: 0.6
+					button
+						line-height: 0
+						font-size: 0
+						padding: 0
+						height: 8px
+						width: 8px
+						background-color: #E6E6E6
+						border: none
+						border-radius: 4px
+						transition: 0.2s
+						outline: 0
+					&.active-slide, &:hover
+						opacity: 1
+						button, button:hover
+							background-color: $red
+							width: 17px
+		.slide
+			transition: 0.2s
+			position: relative
+			opacity: 0
+			.info
+				display: inline-block
+				text-align: left
+				width: 50%
+				border: 1px solid #E5E5E5
+				padding: 72px 71px 79px
+				background-color: #fff
+				position: relative
+				margin-top: 109px
+				h3
+					font-family: $bebas
+					font-size: 42px
+					margin-top: 0
+					line-height: 42px
+					margin-bottom: 35px
+					span
+						color: $red
+						padding-left: 10px
+				ul
+					list-style: none
+					margin: 0
+					padding: 3px 0 0
+					font-size: 18px
+					li
+						color: #000000
+						line-height: 25px
+						span
+							color: #666666
+				a
+					margin-top: 45px
+					text-align: center
+					display: inline-block
+					padding: 5px 54px
+					float: left
+					&:first-of-type
+						color: #fff
+						background-color: $red
+						margin-right: 25px
+					&:last-of-type
+						border: 1px solid #F2F2F2
+						padding: 5px 15px 5px 30px
+						img
+							padding-right: 20px
+				// &:before
+				// 	width: 784px
+				// 	height: 500px
+				// 	content: ""
+				// 	position: absolute
+				// 	left: -20px
+				// 	top: -20px
+				// 	background: url('../img/slider1perf.svg') no-repeat center
+				// 	z-index: -1
+			& > img
+				float: right
+				position: absolute
+				top: 70px
+				right: 0			
+			&.current-slide
+				opacity: 1
+				.info
+					animation: sliderLeftOn 1s forwards
+					animation-delay: 1s
+				& > img
+					animation: sliderRightOn 1s forwards
+					animation-delay: 1s
+			&.slide-back
+				opacity: 1
+				.info
+					animation: sliderLeftOff 1s forwards
+				& > img
+					animation: sliderRightOff 1s forwards
+.land-03
+	.tabs-content
+		background: url("../img/icon/chips2.svg") right bottom no-repeat
+		padding-bottom: 125px
+		.nav-tabs
+			border: none
+			margin-top: 105px
+			li
+				border: none
+				width: 208px
+				margin-bottom: 31px
+				vertical-align: middle
+				display: inline-block
+				a
+					font-size: 27px
+					font-family: $bebas
+					font-weight: bold
+					border-radius: 0
+					height: 80px
+					vertical-align: middle
+					margin: 0
+					padding: 27px 0 0
+					box-shadow: 0 5px 10px rgba(#000, 0.15)
+					line-height: 27px
+					color: #333333
+				&.active, &:hover
+					a
+						border: none
+						background-color: $red
+						color: #fff
+				&:last-child
+					a
+						padding-top: 13px
+		.col-lg-9
+			margin-left: -16px
+		.tab-pane
+			padding-top: 56px
+			float: left
+			position: relative
+			width: 100%
+			.time
+				display: inline-block
+				background-color: #FFF
+				box-shadow: 0 5px 10px rgba(#000, 0.15)
+				position: absolute
+				padding: 17px 42px
+				font-size: 16px
+				line-height: 16px
+				top: 172px
+				left: 207px
+				white-space: nowrap
+			.col-xs-4
+				position: relative
+				transition: 0.3s
+				.row
+					padding: 10px 32px 36px	
+					border: 1px solid transparent
+					h4
+						font-size: 42px
+						font-family: $bebas
+						margin: 10px 0 104px
+						position: relative
+					p
+						text-align: left
+						font-size: 16px
+						line-height: 20px
+				&:before
+					content: ""
+					position: absolute
+					width: 392px
+					height: 448px
+					background: url("../img/tabsperfo.svg") 0 0 no-repeat
+					z-index: -1
+					top: -25px
+					left: -40px
+					opacity: 0
+					transition: 0.2s
+				h4:before
+					content: ""
+					position: absolute
+					transition: all 0.2s
+					width: 0
+					height: 0
+					transform-style: preserve-3d
+					transform: perspective(300px)
+				&:hover
+					background-color: #FFF
+					.row
+						border-color:#E6E6E6
+						
+					&:before
+						opacity: 0.4
+				&:first-child .row
+					h4:before
+						width: 104px
+						height: 89px
+						border-left: 1px solid transparent
+						border-bottom: 1px solid transparent
+						left: 25px
+						top: 31px
+					&:hover
+						h4:before
+							animation: h4inset 0.75s
+							border-color: $red
+				&:nth-child(2) .row
+					h4:before
+						width: 0
+						height: 30px
+						border-right: 1px solid transparent
+						left: 50%
+						top: 61px	
+					&:hover
+						h4:before
+							animation: h4inset 0.75s
+							border-color: $red	
+				&:nth-child(3) .row
+					h4:before
+						width: 104px
+						height: 89px
+						border-right: 1px solid transparent
+						border-bottom: 1px solid transparent
+						right: 25px
+						top: 31px
+					&:hover
+						h4:before
+							animation: h4inset 0.75s
+							border-color: $red
+	.choise-content
+		background-color: #f5f5f5
+		position: relative
+		text-align: left
+		padding-bottom: 33px
+		.col-lg-5
+			border: 1px solid #F2F2F2
+			background: #FFF
+			position: relative
+			margin-top: -27px
+			p
+				padding: 44px 68px 70px
+				font-size: 21px
+				line-height: 35px
+				margin: 0
+				font-weight: lighter
+			a
+				display: block
+				background-color: $red
+				text-align: center
+				padding: 7px 86px
+				color: #fff
+				font-size: 21px
+				position: absolute
+				left: 50%
+				margin-left: -120px
+				bottom: -16px
+		.col-lg-7
+			img
+				margin-top: 52px
+				margin-left: 89px
+.land-04
+	padding-top: 37px
+	.col-lg-6
+		padding-top: 43px
+		.item
+			float: left
+			padding-bottom: 18px
+			img
+				display: block
+				margin-left: auto
+				margin-right: auto
+				margin-top: 28px
+				max-width: 100%
+				max-height: 100%
+				height: auto
+			.col-xs-8
+				margin-left: -16px
+				h3
+					font-family: $bebas
+					font-size: 27px
+					line-height: 27px
+					text-align: left
+					margin-bottom: 52px
+				p
+					font-size: 16px
+					line-height: 25px
+					font-weight: lighter
+					text-align: left
+					min-height: 125px
+		.info
+			float: left
+			width: 100%
+			padding: 27px 10px 20px 156px
+			position: relative
+			&:after
+				position: absolute
+				content: ""
+				width: 414px
+				height: 226px
+				z-index: -1
+				background: #F7F7F7
+				right: 16px
+				top: -8px
+			.col-17, .col-83
+				float: left
+				font-size: 27px
+				line-height: 47px
+				font-family: $bebas
+				font-weight: bold
+			.col-17
+				width: 17.5%
+				background-color: $red
+				color: #fff
+				padding-bottom: 10px
+			.col-83
+				width: 82.5%
+				text-align: left
+				padding-left: 15px
+section.land-05
+	h2
+		margin-top: 32px
+	.col-lg-10 > .row
+		margin: 0 -32px
+	.slider-second
+		margin-top: 71px
+		position: relative
+		overflow: hidden
+		.navigation
+			position: absolute
+			top: 0
+			right: 0
+			font-size: 0
+			button
+				font-size: 0
+				line-height: 0
+				width: 50px
+				height: 50px
+				position: relative
+				border: none
+				outline: 0
+				background-color: $red
+				.chevron
+					fill: #fff
+				&:before
+					content: ""
+					position: absolute
+					width: 50px
+					height: 50px
+					top: 0
+					left: 0
+				&.slider-next
+					border-radius: 0 4px 4px 0
+					width: 52px
+					border-right: 1px solid #fff
+					border-left: 1px solid #fff
+		.dots
+			position: relative
+			float: left
+			left: 68%
+			top: -33px
+			ul
+				list-style: none
+				margin: 0 auto
+				padding: 0
+				display: block
+				margin-left: -50%
+				li
+					display: inline-block
+					opacity: 0.6
+					button
+						line-height: 0
+						font-size: 0
+						padding: 0
+						height: 8px
+						width: 8px
+						background-color: #E6E6E6
+						border: none
+						border-radius: 4px
+						transition: 0.2s
+						outline: 0
+					&.active-slide, &:hover
+						opacity: 1
+						button, button:hover
+							background-color: $red
+							width: 17px
+		.slide
+			position: relative
+			min-height: 635px
+			iframe, & > .img-box
+				width: 656px
+				height: 350px
+				opacity: 0
+			.info
+				opacity: 0
+				width: 384px
+				position: absolute
+				left: 0
+				bottom: 0
+				text-align: left
+				font-size: 18px
+				line-height: 25px
+				p
+					margin-bottom: 35px
+			.slide-name
+				opacity: 0
+			iframe
+				position: absolute
+				left: 0
+				top: 0
+			.img-box
+				position: absolute
+				right: 0
+				top: 147px
+				border: 10px solid $red
+				img
+					max-width: 100%
+					max-height: 100%
+					height: auto
+			.slide-name
+				position: absolute
+				right: 103px
+				top: 0
+				height: 50px
+				width: 213px
+				border-radius: 4px 0 0 4px
+				background-color: $red
+				color: #fff
+				font-size: 18px
+				line-height: 100%
+				text-align: left
+				padding: 9px 15px	
+				span
+					display: block
+					color: #CCCCCC
+					font-size: 14px
+					line-height: 100%
+			&.current-slide
+				.slide-name
+					opacity: 1
+				.info, iframe
+					animation: sliderLeftOn 1s forwards
+					animation-delay: 1s
+				.img-box
+					animation: sliderRightOn 1s forwards
+					animation-delay: 1s
+			&.slide-back
+				.slide-name
+					opacity: 1
+				.info, iframe
+					animation: sliderLeftOff 1s forwards
+				.img-box
+					animation: sliderRightOff 1s forwards
+	&	> .container-fluid
+		background-color: #F7F7F7
+		padding-top: 76px
+		margin-top: 75px
+		padding-bottom: 75px
+		.col-lg-4
+			background-color: #FFF
+			height: 550px
+			&.col-lg-offset-2
+				.row
+					background: $red url("../img/circles.png") center no-repeat
+					background-size: cover
+				h3
+					font-family: $bebas
+					color: #fff
+					font-size: 42px
+					line-height: 42px
+					padding: 0
+					margin-top: 166px
+					margin-bottom: 3px
+				.aside-lines
+					margin-bottom: 210px
+			.suits
+				padding-top: 25px
+				img:first-child
+					padding-right: 25px
+			.form-group
+				padding: 56px 45px 38px 80px
+				label
+					font-weight: lighter
+					font-size: 14px
+					line-height: 14px
+					color: #999
+					display: block
+					margin-bottom: 0
+					text-align: left
+					&:first-child
+						display: inline-block
+				select
+					display: inline-block
+					-webkit-appearance: none
+					appearance: none
+					border: none
+					outline: 0
+					margin-bottom: 23px
+				input
+					border-radius: 0px
+					border: none
+					box-shadow: none
+					padding: 0 0 6px
+					margin-bottom: 26px
+					border-bottom: 1px solid #E5E5E5
+					font-size: 16px
+					line-height: 16px
+					height: auto
+					max-width: 270px
+					&[type="checkbox"]
+						display: none
+						& + label
+							padding-left: 40px
+							position: relative
+							font-size: 16px
+							line-height: 16px
+							&:before
+								position: absolute
+								content: ""
+								width: 20px
+								height: 20px
+								border: 1px solid #ccc
+								left: 0
+								top: 0
+						&:checked + label
+							&:after
+								position: absolute
+								content: ""
+								width: 23px
+								height: 20px
+								background-image: url("../img/icon/checked.svg")
+								background-repeat: no-repeat
+								left: 1px
+								top: 0
+			input[type="submit"]
+				background-color: $red
+				border: none
+				color: #fff
+				height: auto
+				padding: 5px 25px
+				margin-bottom: 75px
+footer
+	background: #212121
+	padding-top: 84px
+	overflow-x: hidden
+	padding-bottom: 75px
+	h4
+		font-family: $bebas
+		font-size: 42px
+		color: #fff
+		margin: 0
+	a, p
+		color: #999
+		font-size: 16px
+		line-height: 25px
+	ul
+		list-style: none
+		margin: 7px 0 0
+		padding: 0
+		li
+			line-height: 16px
+			a:hover, a:focus
+				color: $red
+				outline: 0
+
+
+	.col-lg-4
+		border-left: 1px solid #333333
+		& > a >img
+			padding-top: 16px
+		h4
+			margin-top: 30px
+		ul
+			margin-top: 0
+			li
+				span
+					display: inline-block
+					color: #999999
+					img
+						width: 16px
+						display: inline-block
+						margin-right: 10px
+						height: auto
+				a
+					display: inline-block
+		.follow
+			h4
+				margin-top: 20px
+			ul
+				margin-top: 10px
+				li
+					display: inline-block
+					float: left
+
+					a
+						width: 50px
+						height: 50px
+						border-radius: 25px
+						border: 1px solid #999999
+						text-align: center
+						vertical-align: middle
+						line-height: 45px
+						margin-left: 35px
+						img
+							display: inline-block
+						&:hover
+							background-color: #FFF
+	.col-lg-8
+		padding-bottom: 35px
+		ul
+			margin-top: 7px
+		.col-lg-12
+			border-top: 1px solid #333333
+			padding-top: 26px
+			p
+				margin: 0 0 10px 0
+		.col-lg-4
+			border: none
+			padding-bottom: 15px
+			h4
+				margin: 0
+
+	
+
+
+
+@import "media" // Всегда в конце

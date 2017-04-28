@@ -1,0 +1,609 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1248px)
+	header
+		padding-top: 20px
+		.navbar
+			.navbar-header
+				width: 100%
+				.navbar-toggle
+					display: block
+					.icon-bar
+						background-color: #2d2d2d
+						&:last-child
+							width: 70%
+
+					&.opened
+						.icon-bar
+							&:nth-child(2)
+								animation: navtoggle 0.5s forwards
+							&:nth-child(3)
+								animation: navtoggle2 0.5s forwards
+								transform: rotate(-45deg) translateY(-10px)
+							&:last-child
+								display: none
+				.navbar-brand
+					padding-left: 20px
+			.navbar-collapse.collapse, .navbar-collapse.collapsing
+				display: none !important
+				position: absolute
+				top: 80px
+				right: 0
+				width: 300px
+				margin: 0
+				padding: 22px 0 0
+				background-color: #f2f2f2
+				height: 1000px !important
+				z-index: 1000
+				&:before
+					position: absolute
+					right: 300px
+					top: 0
+					content: ""
+					height: 1000px
+					width: 1200px
+					z-index: -1
+					background-color: rgba(#000, 0.5)
+				.navbar-nav
+					width: 100%
+					position: relative !important
+					background-color: #f2f2f2
+					display: block
+					left: auto
+					&.navbar-right
+						float: left !important
+						li
+							&:last-child
+								border: none
+					li
+						display: block
+						float: none
+						padding: 9px 0 9px 40px
+						border-bottom: 1px solid #ccc
+						a
+							img
+								display: none
+						&.dropdown
+							padding: 0
+							a
+								padding-left: 40px
+							.dropdown-menu
+								position: relative
+								padding: 0
+								width: 100%
+								float: none
+								left: 0
+								top: 0
+								display: block
+								background-color: #e6e6e6
+								box-shadow: none
+								box-shadow: inset 0 0 5px rgba(#000, 0.15)
+								h3
+									line-height: 45px
+								p
+									display: none
+								&:after
+									content: none
+								.col-lg-5, .col-lg-7
+									padding: 0
+									margin: 0
+									border: none
+
+						&.active
+							a:before
+								content: none
+
+				&.in
+					display: block !important
+					animation: sliderRightOn 0.5s
+	.banner-top .col-lg-7 .video-box
+		margin-top: 153px
+		iframe
+			width: 460px
+			height: 290px
+		&:after
+			width: 697px
+			height: 505px
+			background-size: cover
+			left: -63px
+			top: 127px
+	.banner-top
+		padding-bottom: 127px
+		.col-lg-5
+			h2
+				font-size: 50px
+				line-height: 50px
+				margin-top: 102px
+				margin-bottom: 27px
+				&:after
+					bottom: -17px
+			p
+				font-size: 18px
+				line-height: 31px
+				padding-top: 0
+	section[class^=land] h2
+		margin-top: 80px
+		span
+			top: -3px
+	.land-01
+		background-position: -242px -58px
+		.col-lg-10 .row
+			margin-left: -16px
+			margin-right: -16px
+		p
+			margin-left: 16px
+			margin-right: 16px
+			font-size: 18px
+			line-height: 35px
+	.land-02
+		.slider-first
+			.navigation
+				top: 430px
+			.dots
+				top: 49px
+			.slide
+				.info
+					padding: 63px 22px 87px
+					margin-top: 100px
+					h3
+						font-size: 35px
+					ul
+						padding-top: 1px
+					a
+						margin-top: 28px
+
+				&>img
+					width: 624px
+					height: 450px
+					top: 72px
+	.land-03
+		.tabs-content	
+			text-align: center
+			background-position: 130% top
+			padding-bottom: 92px
+			.nav-tabs
+				display: inline-block
+				margin-top: 9px
+				margin-left: auto
+				margin-right: auto
+				li
+					margin-right: 25px
+					&:last-child
+						margin-right: 0
+			.tab-pane
+				padding-top: 30px
+				.time
+					top: 136px
+					left: 50%
+					margin-left: -25%
+				.col-lg-4
+					.row
+						padding-top: 3px
+
+		.col-lg-9
+			.row	
+				margin: 0
+		.choise-content
+			.col-lg-5
+				p
+					padding: 57px 28px 92px 28px
+					font-size: 18px
+			.col-lg-7
+				img
+					margin-left: 20px
+	section.land-04
+		h2
+			margin-top: 40px
+		.col-lg-6 .item .col-lg-8 h3
+			margin-top: 20px
+		.col-lg-6 .info
+			padding: 73px 24px 0
+			&:after
+				right: 40px
+				top: 35px
+	section.land-05
+		h2
+			margin-top: 58px
+		.col-lg-10
+			.row
+				margin: 0
+		.slider-second
+			margin-top: 68px
+			.dots
+				left: 73%
+				top: -102px
+			.slide
+				iframe
+					width: 600px
+					height: 325px
+				.img-box
+					width: 470px
+					height: 250px
+					top: 192px
+				.info
+					bottom: 54px
+		&>.container-fluid
+			margin-top: 0
+	footer
+		padding-top: 64px
+		.col-md-8
+			width: 62%
+			&+.col-md-4
+				width: 38%
+				padding-left: 39px
+				h4
+					margin-top: 47px
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 999px)
+	.banner-top
+		padding-bottom: 70px
+		.col-lg-5 h2
+			margin-top: 97px
+		.col-lg-7 .video-box
+			margin-top: 105px
+			margin-left: 65px
+			iframe
+				display: none
+			img
+				display: block
+				height: 360px
+				width: auto
+			&:after
+				width: 856px
+				height: 585px
+				background-size: cover
+				left: -60px
+				top: 70px
+				z-index: -1
+	.land-01
+		background-position: -210px -65px
+		padding-bottom: 70px
+		p
+			padding: 18px 15px
+	section.land-02
+		h2
+			margin-top: 50px
+		.slider-first
+			padding-bottom: 13px
+			.navigation
+				top: 350px
+			.dots
+				top: 52px
+			.slide
+				.info
+					padding: 19px 22px 28px
+					margin-top: 100px
+					h3
+						font-size: 35px
+					ul
+						padding-top: 1px
+					a
+						margin-top: 28px
+						&:last-of-type
+							position: absolute
+							right: 0
+							top: -1px
+							padding: 4px 12px
+							img
+								padding: 0
+							span
+								display: none
+
+				&>img
+					width: 510px
+					height: 370px
+					top: 72px
+	.land-03
+		.tabs-content
+			.nav-tabs
+				padding-top: 58px
+			.tab-pane
+				box-shadow: 0 0 24px rgba(#000, 0.1)
+				border: 1px solid #f2f2f2
+				.time
+					left: 41%
+			.col-lg-9
+				padding-left: 16px
+				padding-right: 16px
+				.row	
+					margin-left: -16px
+					margin-right: -16px
+				.col-xs-4
+					.row
+						padding-right: 0
+						padding-bottom: 13px
+						h4
+							background-color: #FFF
+							display: inline-block
+							margin-left: auto
+							margin-right: auto
+							padding: 0 15px
+							margin-bottom: 77px
+						p
+							font-size: 16px
+							line-height: 20px
+						&:hover
+							border-color: transparent
+							h4:before
+								border-color: $red !important
+
+						h4:before
+							border-color: $red !important
+							animation: none !important
+							z-index: -1
+					&:hover
+						background-color: transparent
+						.row
+							border-color: transparent
+						&:before
+							content: none
+					&:first-child
+						.row h4:before
+							width: 118px
+							height: 86px
+							border-bottom: 1px solid $red
+							border-left: 1px solid $red
+							border-top: 1px solid $red
+							left: -25px
+							top: 30px
+					&:nth-child(3)
+						.row h4:before
+							width: 125px
+							height: 86px
+							border-bottom: 1px solid $red
+							border-right: 1px solid $red
+							border-top: 1px solid $red
+							right: -25px
+							top: 30px
+		.choise-content .col-lg-7 img
+			margin-top: 83px
+	section.land-04
+		h2
+			margin-left: 100px
+			margin-right: 100px
+			line-height: 50px
+			margin-top: 52px
+			span
+				top: -30px
+		.col-lg-6
+			padding-top: 67px
+			.item
+				.col-lg-8
+					h3
+						min-height: 54px
+						padding-right: 40px
+						margin-bottom: 20px
+					p
+						width: 330px
+						margin-left: -90px
+						min-height: 150px
+			.info
+				padding-left: 0
+				padding-top: 30px
+				&:after
+					top: 0
+					right: 0
+					width: 355px
+				.col-17
+					width: 23%
+					padding-top: 10px
+					padding-bottom: 0
+				.col-83
+					width: 77%
+					padding-top: 10px
+	section.land-05
+		h2
+			margin-top: 20px
+		.slider-second
+			margin-top: 68px
+			.dots
+				left: 73%
+				top: -192px
+			.slide
+				min-height: 580px
+				iframe
+					width: 430px
+					height: 230px
+				.img-box
+					width: 370px
+					height: 200px
+					top: 113px
+				.info
+					bottom: 54px
+					p
+						width: 330px
+				.slide-name
+					width: 150px
+		&>.container-fluid
+			padding-top: 88px
+			.col-lg-4
+				.suits
+					padding-top: 33px
+				.form-group
+					padding-left: 60px
+					padding-top: 36px
+					padding-right: 10px
+					select
+						margin-bottom: 37px
+					input
+						margin-bottom: 31px
+			.col-lg-4.col-lg-offset-2
+				h3
+					font-size: 35px
+					line-height: 35px
+					margin-top: 155px
+					margin-bottom: 12px
+				.aside-lines
+					img
+						width: 10px
+						height: 10px
+	footer
+		padding-top: 32px
+		a
+			font-size: 18px
+			line-height: 27px
+		.col-md-8
+			width: 100%
+			&+.col-md-4
+				width: 100%
+				padding-left: 20px
+				.col-sm-6
+					&:first-of-type
+						float: right
+						padding-left: 35px
+						h4
+							line-height: 50px
+						ul
+							margin-top: 40px
+					&:last-of-type
+						float: left
+				&>a>img
+					padding-top: 0
+					width: 244px
+					height: auto
+				h4
+					margin-top: 0
+			.col-lg-4
+				padding-bottom: 40px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+	.container
+		width: 480px
+	header
+		padding-top: 0
+		.navbar
+			margin-bottom: 0
+			&>.container-fluid
+			.navbar-header
+				width: auto
+				.navbar-brand
+					img
+						width: 147px
+						padding-top: 20px
+				.navbar-toggle
+					margin-right: 0
+					margin-top: 0
+					margin-bottom: 0
+					padding: 31px 27px
+					border-radius: 0
+					border-left: 1px solid #ccc
+					border-bottom: 1px solid #ccc
+					height: 79px
+	.banner-top
+		.col-lg-5
+			h2
+				margin-top: 66px
+	.land-01
+		background-position: -244px -44px
+		p
+			&:before
+				background-size: cover
+				right: -68px
+				top: -53px
+				width: 131px
+				height: 113px
+	section.land-02
+		h2
+			margin-top: 77px
+		.slider-first
+			margin-top: 60px
+			padding-bottom: 38px
+			.navigation
+				top: 280px
+				left: auto
+				right: 1px
+			.dots
+				top: 30px
+			.slide
+				min-height: 600px
+				.info
+					width: 448px
+					height: 350px
+					top: 0
+					left: 0
+					margin-top: 0
+					h3
+						margin-top: 32px
+						margin-bottom: 22px
+					a
+						margin-top: 61px
+				&>img
+					width: 448px
+					height: 250px
+					top: auto
+					bottom: 0
+					left: 0
+	section[class^=land]
+		h2
+			margin-left: 40px
+			margin-right: 40px
+		&>.container-fluid
+			background: none
+	.land-03
+		.tabs-content
+			.tab-pane
+				.time
+					white-space: normal
+					max-width: 330px
+					left: 40%
+				.col-xs-4
+					.row
+						padding: 10px 15px 36px
+						p
+							display: none
+			.nav-tabs
+				li
+					width: 135px
+					margin-right: 18px
+					a
+						font-size: 18px
+			.col-lg-9
+				margin-left: 0
+	section.land-04
+		.col-lg-6
+			.item
+				.col-lg-8
+					p
+						width: 100%
+						margin-left: 0
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
