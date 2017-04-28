@@ -775,14 +775,21 @@ section.land-05
 			.info
 				opacity: 0
 				width: 384px
-				position: absolute
+				position: relative
 				left: 0
-				bottom: 0
+				margin-top: 420px
 				text-align: left
 				font-size: 18px
 				line-height: 25px
 				p
 					margin-bottom: 35px
+					&.hide-text
+						overflow: hidden
+						height: 155px
+				button
+					position: absolute
+					bottom: -57px
+					left: 0
 			.slide-name
 				opacity: 0
 			iframe
@@ -795,9 +802,8 @@ section.land-05
 				top: 147px
 				border: 10px solid $red
 				img
-					max-width: 100%
-					max-height: 100%
-					height: auto
+					width: 100%
+					height: 100%
 			.slide-name
 				position: absolute
 				right: 103px
