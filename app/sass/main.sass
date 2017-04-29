@@ -82,6 +82,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	opacity: 1
+	width: 100%
 	h2
 		font-family: $bebas
 	a
@@ -301,6 +302,8 @@ section[class^="land"]
 	text-align: center
 	padding-bottom: 55px
 	background: #f7f7f7 url("../img//icon/chips1.png") no-repeat 0 123px
+	.container-fluid
+		overflow-x: hidden
 	p
 		background-color: #FFF
 		display: block
@@ -313,6 +316,7 @@ section[class^="land"]
 			display: inline-block
 			color: #fff
 			padding: 0 5px
+			font-weight: bold
 		&:before
 			content: ""
 			position: absolute
@@ -614,6 +618,7 @@ section[class^="land"]
 		position: relative
 		text-align: left
 		padding-bottom: 33px
+		overflow-x: hidden
 		.col-lg-5
 			border: 1px solid #F2F2F2
 			background: #FFF
@@ -783,9 +788,13 @@ section.land-05
 				line-height: 25px
 				p
 					margin-bottom: 35px
-					&.hide-text
+					&.collapse, &.collapsing
+						height: 155px !important
+						transition: 0.35s
+						display: block
 						overflow: hidden
-						height: 155px
+						&.in
+							height: auto !important
 				button
 					position: absolute
 					bottom: -57px
@@ -862,8 +871,12 @@ section.land-05
 					margin-bottom: 210px
 			.suits
 				padding-top: 25px
-				img:first-child
+				img
 					padding-right: 25px
+					&.only-xs
+						display: none
+					&:last-child
+						padding-right: 0
 			.form-group
 				padding: 56px 45px 38px 80px
 				label
@@ -975,6 +988,7 @@ footer
 				margin-top: 20px
 			ul
 				margin-top: 10px
+				display: block
 				li
 					display: inline-block
 					float: left
@@ -1001,11 +1015,25 @@ footer
 			padding-top: 26px
 			p
 				margin: 0 0 10px 0
-		.col-lg-4
+		.col-sm-4
 			border: none
 			padding-bottom: 15px
 			h4
 				margin: 0
+				&[data-toggle="collapse"]
+					padding-right: 40px
+					position: relative
+					&:before
+						position: absolute
+						content: "\f0d7"
+						right: 0
+						top: 17px
+						font: normal normal normal 19px/1 FontAwesome
+						color: $red
+						transition: 0.2s
+					&[aria-expanded="true"]:before
+						transform: rotate(180deg) 
+
 
 	
 

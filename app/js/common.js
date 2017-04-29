@@ -15,6 +15,7 @@ function sliderAnimation(slider, sliderDelay) {
     	, sliderDelay);
   	$($(dots)[counter]).addClass("active-slide").prop("disabled");
   	$($(slides)[counter]).addClass("current-slide");
+    $(slider).find(".collapse.in").removeClass("in");
 	};
   var step=slider.width(),
     slider_box_width=slider.width(),
@@ -109,17 +110,31 @@ function sliderAnimation(slider, sliderDelay) {
 function navbarPosition(){
   var frameWidth = $(window).width(),
     containerWidth = $(".container").width();
-  $(".navbar-collapse").css("right", -(frameWidth-containerWidth)/2);
-
+  $(".navbar-collapse").css("right", -(frameWidth-containerWidth)/2+14);
+  $(".navbar-toggle").css("right", -(frameWidth-containerWidth)/2+14);
 
 }
 
 $(function() {
-
+  // слайдеры
   sliderAnimation($(".slider-first"), 1000);
 	sliderAnimation($(".slider-second"), 1000);
+  // плавный скрол
+  $("a.scrollto").click(function() {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: destination
+    }, 800);
+    return false;
+  });
+  // позиция меню
   if ( $(window).width() < 1248 ) {
     navbarPosition();
+  };
+
+  if ( $(window).width() < 767 ) {
+    $(".collapse.in").removeClass("in");
   };
 
   $(window).resize(function(){
