@@ -27,6 +27,7 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/colorbox/jquery.colorbox.js',
 		'app/libs/bootstrap/bootstrap.js',// Всегда в конце
 		])
 	.pipe(concat('libs.min.js'))
