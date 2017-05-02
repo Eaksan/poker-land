@@ -413,6 +413,9 @@
 			.dots
 				left: 73%
 				top: -192px
+			.navigation
+				&:after
+					width: 220px
 			.slide
 				min-height: 580px
 				iframe
@@ -739,10 +742,27 @@
 						a
 							font-size: 21px
 							line-height: 36px
-		.col-lg-4 .follow ul li
-			float: none
-			&:first-child a
-				margin-left: 0
+		.col-lg-4
+			&>a
+				font-size: 35px
+				line-height: 55px
+				&.visible-xs
+					display: inline-block !important
+					font-size: 20px
+					padding-left: 25px
+					padding-right: 25px
+					transition: 0.2s
+					&[aria-expanded="true"]
+						transform: rotate(180deg) translateY(-5px)
+					i
+						line-height: 55px
+						&:before
+							top: -3px
+							position: relative
+			.follow ul li
+				float: none
+				&:first-child a
+					margin-left: 0
 
 
 /* Extra Small Devices, Phones */

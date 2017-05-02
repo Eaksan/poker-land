@@ -800,9 +800,9 @@ section.land-05
 				position: absolute
 				content: ""
 				z-index: -1
-				width: 290px
+				width: 280px
 				height: 31px
-				left: -200px
+				right: 15px
 				top: 15px
 				background-color: $red
 				filter: blur(10px)
@@ -986,6 +986,7 @@ section.land-05
 						padding-right: 0
 			.form-group
 				padding: 56px 45px 38px 80px
+				position: relative
 				label
 					font-weight: lighter
 					font-size: 14px
@@ -994,8 +995,43 @@ section.land-05
 					display: block
 					margin-bottom: 0
 					text-align: left
+					position: relative
 					&:first-child
 						display: inline-block
+				input[type="text"]
+					&::-webkit-input-placeholder
+						opacity: 0
+						transition: 0.3s
+					&::-moz-placeholder
+						opacity: 0
+						transition: 0.3s
+					&:-moz-placeholder
+						opacity: 0
+						transition: 0.3s
+					&:-ms-input-placeholder
+						opacity: 0
+						transition: 0.3s
+					&+label
+						position: relative
+						top: -50px
+						font-size: 16px
+						line-height: 16px
+						transition: 0.3s
+						display: inline-block
+						text-align: left
+						float: left
+						cursor: text
+					&:focus
+						& + label
+							transform: scale(0.8) translate(-5px,-30px)
+						&::-webkit-input-placeholder
+							opacity: 1
+						&::-moz-placeholder
+							opacity: 1
+						&:-moz-placeholder
+							opacity: 1
+						&:-ms-input-placeholder
+							opacity: 1
 				select
 					display: inline-block
 					-webkit-appearance: none
@@ -1088,8 +1124,16 @@ footer
 
 	.col-lg-4
 		border-left: 1px solid #333333
-		& > a >img
+		& > a
+			font-size: 42px
+			color: #fff
+			font-family: $bebas
+			font-weight: bold
+			line-height: 1.75
+			& >img
 			padding-top: 16px
+			i
+				color: $red
 		h4
 			margin-top: 30px
 		ul
@@ -1114,7 +1158,6 @@ footer
 				li
 					display: inline-block
 					float: left
-
 					a
 						width: 50px
 						height: 50px
