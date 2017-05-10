@@ -135,23 +135,6 @@ function sliderAnimation(slider, sliderDelay) {
     };
     removeAddClass(slide_counter,prevSlideCount, col_main_left);
   });
-
-//   slider.mouseup(function() {
-//     slider_mouse_x2 = event.pageX;
-//     if(slider_mouse_x1 == 0) { return }
-
-//     if (slider_mouse_x1 - slider_mouse_x2 > 25) {
-//       // to prev
-
-//     } else if(slider_mouse_x1 - slider_mouse_x2 < -25) {
-//       // to next
-//     }
-//     slider_mouse_x1 = 0
-//   });
-
-//   slider.mousedown(function() {
-//     slider_mouse_x1 = event.pageX;
-//   });
 };
 
 function navbarPosition(){
@@ -166,8 +149,12 @@ $(function() {
   // слайдеры
   sliderAnimation($(".slider-first"), 1000);
   sliderAnimation($(".slider-second"), 1000);
+  //модальные окна
   $(".img-box").colorbox();
   $(".login").colorbox();
+  $(".registr").colorbox();
+  // валидация
+  $("form").validate();
   // плавный скрол
   $("a.scrollto").click(function() {
     var elementClick = $(this).attr("href")
